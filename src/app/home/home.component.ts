@@ -12,4 +12,13 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  onFormSubmit(event){
+    console.log(event);
+  }
+
+  
+  checked(event){
+    console.log(event ? " Checkbox is checked" : "Checkbox is Unchecked");
+  }
+
 }

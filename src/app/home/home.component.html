@@ -1,11 +1,13 @@
 <div class="row"style="margin-top : 50px; ">
-    <div class="col-md-6"><app-auth-user>
+    <div class="col-md-6">
+    <app-auth-user (submitted)="onFormSubmit($event)" #loginForm >
         <h3> Login Form </h3>
-        <button type="submit"  class="btn btn-primary submit-button "> Login </button>
+        <button type="button"  class="btn btn-primary submit-button " (click)="loginForm.submit()"> Login </button>
     </app-auth-user></div>
-    <div class="col-md-6"><app-auth-user>
+    <div class="col-md-6">
+        <app-auth-user (submitted)="onFormSubmit($event)" #signUpForm>
         <h3> SignUp Form </h3>
-        <button type="submit" class="btn btn-primary submit-button "> SingUp </button>
-        <app-auth-remember></app-auth-remember>
+        <button type="button" class="btn btn-primary submit-button " (click)="signUpForm.submit()"> SingUp </button>
+        <app-auth-remember (check)="checked($event)"></app-auth-remember>
     </app-auth-user></div>
 </div>
