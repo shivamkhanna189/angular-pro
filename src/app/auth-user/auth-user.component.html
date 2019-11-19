@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+                <form >
+                        <ng-content select="h3"></ng-content>
+                        <div class="form-group">
+                            <label for="username"> Username: </label>
+                            <input type="text" class="form-control" id ="username" name="username">
+                        </div>
+                        <div class="form-group">
+                                <label for="password"> Password: </label>
+                                <input type="password" class="form-control" id ="password"  name="password">
+                        </div>
+                        <ng-content select="app-auth-remember"></ng-content>
+                        <ng-content select=".submit-button"></ng-content>
+            </form>
+        </div>
+    </div>
+</div>
+
